@@ -6,20 +6,20 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:51:40 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/18 10:51:14 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/11/18 15:11:55 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-  size_t i;
-  i = 0;
+	size_t i;
 
-  while (str[i])
-  {
-    i++;
-  }
-  return (i);
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
