@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 11:51:40 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/18 15:11:55 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/11/19 15:33:54 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <libft.h>
 
 size_t	ft_strlen(const char *str)
 {
