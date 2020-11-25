@@ -6,7 +6,7 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 10:18:12 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/25 14:09:56 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/11/25 14:19:45 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
-	char	*dstcpy;
-	const char	*srccpy;
 
-	dstcpy = (char *)dst;
-	srccpy = (const char *)src;
 	i = 0;
 	if ((dst == NULL) && (src == NULL))
 		return (NULL);
@@ -27,17 +23,17 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len > 0)
 		{
-			dstcpy[len - 1] = srccpy[len - 1];
+			((char *)dst)[len - 1] = ((const char *)src)[len - 1];
 			len--;
 		}
 	}
 	else
 	{
 		while (i < len)
-   	 	{
-			dstcpy[i] = srccpy[i];
+		{
+			((char *)dst)[i] = ((const char *)src)[i];
 			i++;
 		}
 	}
-	return (dstcpy);
+	return (dst);
 }
