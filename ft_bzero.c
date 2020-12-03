@@ -6,18 +6,18 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:30:44 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/23 17:32:47 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/03 11:52:08 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_bzero(void *s, size_t n)
+void				ft_bzero(void *s, size_t n)
 {
-	size_t i;
-	unsigned char *ptr;
-	ptr = (unsigned char*)s;
+	size_t			i;
+	unsigned char	*ptr;
 
+	ptr = (unsigned char*)s;
 	i = 0;
 	while (i < n)
 	{

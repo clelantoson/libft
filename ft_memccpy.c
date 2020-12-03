@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 17:35:22 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/30 19:16:37 by cle-lan          ###   ########.fr       */
+/*   Created: 2020/11/30 17:30:21 by cle-lan           #+#    #+#             */
+/*   Updated: 2020/11/30 18:55:04 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void			*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t		i;
-	char		*dstcpy;
-	const char	*srccpy;
+	size_t i;
 
-	dstcpy = (char *)dst;
-	srccpy = (const char *)src;
 	i = 0;
-	if ((dstcpy == NULL) && (srccpy == NULL))
+	if ((dst == NULL) && (src == NULL))
 		return (NULL);
 	while (i < n)
 	{
-		dstcpy[i] = srccpy[i];
+		((unsigned char *)dst)[i] = ((unsigned char*)src)[i];
+		if (((unsigned char*)src)[i] == ((unsigned char)c))
+			return (&dst[i + 1]);
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }

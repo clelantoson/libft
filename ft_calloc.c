@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 17:35:22 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/30 19:16:37 by cle-lan          ###   ########.fr       */
+/*   Created: 2020/12/02 15:02:19 by cle-lan           #+#    #+#             */
+/*   Updated: 2020/12/03 11:31:58 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void			*ft_memcpy(void *dst, const void *src, size_t n)
+void		*ft_calloc(size_t count, size_t size)
 {
-	size_t		i;
-	char		*dstcpy;
-	const char	*srccpy;
+	size_t	i;
+	char	*copycount;
 
-	dstcpy = (char *)dst;
-	srccpy = (const char *)src;
-	i = 0;
-	if ((dstcpy == NULL) && (srccpy == NULL))
+	copycount = (char *)malloc(count * size);
+	if (copycount == NULL)
 		return (NULL);
-	while (i < n)
+	i = 0;
+	while (copycount[i])
 	{
-		dstcpy[i] = srccpy[i];
+		copycount[i] = '\0';
 		i++;
 	}
-	return (dst);
+	return ((void *)copycount);
 }

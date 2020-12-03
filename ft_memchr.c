@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 17:35:22 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/30 19:16:37 by cle-lan          ###   ########.fr       */
+/*   Created: 2020/11/30 16:47:46 by cle-lan           #+#    #+#             */
+/*   Updated: 2020/12/03 11:57:32 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void			*ft_memcpy(void *dst, const void *src, size_t n)
+void				*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t		i;
-	char		*dstcpy;
-	const char	*srccpy;
+	size_t			i;
+	unsigned char	*copys;
 
-	dstcpy = (char *)dst;
-	srccpy = (const char *)src;
+	copys = (unsigned char *)s;
 	i = 0;
-	if ((dstcpy == NULL) && (srccpy == NULL))
-		return (NULL);
-	while (i < n)
+	while (n > i)
 	{
-		dstcpy[i] = srccpy[i];
+		if (copys[i] == (unsigned char)c)
+			return (&copys[i]);
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }

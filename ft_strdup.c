@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 17:35:22 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/30 19:16:37 by cle-lan          ###   ########.fr       */
+/*   Created: 2020/12/02 11:15:31 by cle-lan           #+#    #+#             */
+/*   Updated: 2020/12/03 11:54:08 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void			*ft_memcpy(void *dst, const void *src, size_t n)
+char		*ft_strdup(const char *s1)
 {
-	size_t		i;
-	char		*dstcpy;
-	const char	*srccpy;
+	int		i;
+	char	*dest;
 
-	dstcpy = (char *)dst;
-	srccpy = (const char *)src;
 	i = 0;
-	if ((dstcpy == NULL) && (srccpy == NULL))
+	dest = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + 1));
+	if (dest == NULL)
 		return (NULL);
-	while (i < n)
+	while (s1[i])
 	{
-		dstcpy[i] = srccpy[i];
+		dest[i] = s1[i];
 		i++;
 	}
-	return (dst);
+	dest[i] = '\0';
+	return (dest);
 }
