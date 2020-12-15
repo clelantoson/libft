@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:28:47 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/19 17:31:22 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/09 18:08:06 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

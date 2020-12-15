@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:39:23 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/03 12:01:39 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/04 17:39:21 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int			ft_memcmp(const void *s1, const void *s2, size_t n)
 {

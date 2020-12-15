@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 11:59:34 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/14 17:19:26 by cle-lan          ###   ########.fr       */
+/*   Created: 2020/12/02 18:41:24 by cle-lan           #+#    #+#             */
+/*   Updated: 2020/12/15 15:37:27 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		i;
-	int		nbr;
-	int		sign;
+	unsigned int bignum;
 
-	i = 0;
-	nbr = 0;
-	sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	bignum = n;
+	if (n < 0)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		bignum = -bignum;
+		ft_putchar_fd('-', fd);
 	}
-	while (str[i] && ft_isdigit(str[i]))
-	{
-		nbr = nbr * 10 + str[i] - '0';
-		i++;
-	}
-	return (nbr * sign);
+	if (bignum >= 10)
+		ft_putnbr_fd(bignum / 10, fd);
+	ft_putchar_fd(bignum % 10 + '0', fd);
 }

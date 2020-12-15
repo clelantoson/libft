@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 11:59:34 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/14 17:19:26 by cle-lan          ###   ########.fr       */
+/*   Created: 2020/12/03 18:11:01 by cle-lan           #+#    #+#             */
+/*   Updated: 2020/12/15 15:37:13 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*str;
 	int		i;
-	int		nbr;
-	int		sign;
+	int		j;
 
 	i = 0;
-	nbr = 0;
-	sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[i])
 	{
-		if (str[i] == '-')
-			sign = -1;
+		str[i] = s1[i];
 		i++;
 	}
-	while (str[i] && ft_isdigit(str[i]))
-	{
-		nbr = nbr * 10 + str[i] - '0';
-		i++;
-	}
-	return (nbr * sign);
+	while (s2[j])
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	return (str);
 }

@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:02:19 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/03 11:31:58 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/07 10:59:13 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void		*ft_calloc(size_t count, size_t size)
 {
@@ -26,5 +26,5 @@ void		*ft_calloc(size_t count, size_t size)
 		copycount[i] = '\0';
 		i++;
 	}
-	return ((void *)copycount);
+	return (copycount);
 }

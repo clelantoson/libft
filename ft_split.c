@@ -6,7 +6,7 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 19:16:01 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/10 11:12:38 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/10 19:41:05 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,16 @@ char				**ft_split(char const *s, char c)
 	char			**tabtabs;
 	unsigned int	start;
 	int				word;
-	int				wordnb;
+	int				total_words;
 
 	if (s == NULL)
 		return (NULL);
 	i = 0;
 	word = 0;
-	wordnb = count_words((char *)s, c);
-	if (!(tabtabs = (char **)malloc(sizeof(char *) * wordnb + 1)))
+	total_words = count_words((char *)s, c);
+	if (!(tabtabs = (char **)malloc(sizeof(char *) * total_words + 1)))
 		return (NULL);
-	while (s[i] && word < wordnb)
+	while (s[i] && word < total_words)
 	{
 		while (s[i] == c)
 			i++;

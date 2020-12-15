@@ -6,15 +6,15 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 17:33:18 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/03 12:45:41 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/09 18:08:56 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-unsigned int		ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t		ft_strlcpy(char *dest, char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (size <= 0)

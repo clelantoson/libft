@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 15:20:31 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/03 12:00:03 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/04 17:39:16 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

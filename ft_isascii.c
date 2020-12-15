@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 13:04:27 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/19 15:35:32 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/09 18:06:53 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

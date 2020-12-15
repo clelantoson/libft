@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 11:15:31 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/03 11:54:08 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/09 16:54:56 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char		*ft_strdup(const char *s1)
 {

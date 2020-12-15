@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:40:49 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/03 11:55:29 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/04 17:38:14 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

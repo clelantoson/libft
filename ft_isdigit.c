@@ -6,11 +6,11 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:30:13 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/11/19 16:02:07 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/09 18:05:51 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
