@@ -6,7 +6,7 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:40:49 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/04 17:38:14 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/20 01:50:32 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
 		return (srclen);
+	if (dstsize < dstlen)
+		return (srclen + dstsize);
 	while (dst[i])
 		i++;
-	while (src[j] && (j + i) < dstsize - 1)
+	while ((j + i) < (dstsize - 1) && src[j])
 	{
 		dst[i + j] = src[j];
 		j++;
 	}
-	if (dstsize < dstlen)
-		return (srclen + dstsize);
 	if (i < dstsize)
 		dst[i + j] = '\0';
 	return (i + srclen);
