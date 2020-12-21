@@ -6,7 +6,7 @@
 #    By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/19 11:38:59 by cle-lan           #+#    #+#              #
-#    Updated: 2020/12/20 02:05:58 by cle-lan          ###   ########.fr        #
+#    Updated: 2020/12/21 15:38:47 by cle-lan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ BONUSSRC = ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
+		ft_lstmap.c \
 
 OBJ = $(SRC:.c=.o)
 
