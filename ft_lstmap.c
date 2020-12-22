@@ -6,7 +6,7 @@
 /*   By: cle-lan <cle-lan@42.student.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/17 18:31:06 by cle-lan           #+#    #+#             */
-/*   Updated: 2020/12/21 23:31:26 by cle-lan          ###   ########.fr       */
+/*   Updated: 2020/12/22 19:52:15 by cle-lan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		new_link = ft_lstnew(f(lst->content));
-		result->next = &new_link;
+		result->next = new_link;
 		if (!result->next)
 		{
 			ft_lstclear(&head, del);
